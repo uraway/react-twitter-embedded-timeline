@@ -2,6 +2,12 @@
 
 Simple React component for Twitter Embedded Timeline
 
+## Install
+
+```
+npm install --save react-twitter-embedded-timeline
+```
+
 ## Example
 
 ![](http://i.imgur.com/jwu7yuK.png)
@@ -35,4 +41,8 @@ Option|Description
 ---|---
 `user`| Twitter username
 `chrome`| Custmize the timeline: `noheader`, `nofooter`, `noborders`, `noscrollbar`, `transparent`
-`limit`| Display a specific number of items between 1 and 20 
+`limit`| Display a specific number of items between 1 and 20
+
+
+---
+MIT licensed
