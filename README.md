@@ -1,4 +1,4 @@
-# react-twiiter-embedded-timeline
+# react-twitter-embedded-timeline
 
 Simple React component for Twitter Embedded Timeline
 
