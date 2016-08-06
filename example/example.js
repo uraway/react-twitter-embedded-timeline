@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div>
         <TwitterTimeline user="uraway_" />
-        <TwitterTimeline widgetId="695868534455275520" chrom="noborders noheader" />
+        <TwitterTimeline widgetId="695868534455275520" chrome="noborders noheader" />
       </div>
     );
   }
