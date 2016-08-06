@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { TwitterTimeline } from '../lib/main';
+import TwitterTimeline from '../lib/TwitterTimeline';
 
 class App extends React.Component {
   render() {
