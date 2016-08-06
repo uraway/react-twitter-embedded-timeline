@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 
 export default class TwitterTimeline extends Component {
   static propTypes = {
-    widgetId: PropTypes.number.isRequired,
-    user: PropTypes.number,
+    widgetId: PropTypes.number,
+    user: PropTypes.string,
     chrome: PropTypes.arrayOf(['noheader', 'nofooter', 'noborders', 'noscrollbar', 'transparent']),
     limit: PropTypes.number,
   };
@@ -45,11 +45,13 @@ export default class TwitterTimeline extends Component {
       <a
         ref="twittertimeline"
         className="twitter-timeline"
-        href={`https://twitter.com/+${user}`}
+        href={`https://twitter.com/${user}`}
         data-widget-id={widgetId}
         data-chrome={chrome}
         data-tweet-limit={limit}
-      ></a>
+      />
     );
   }
 }
+
+exports.modules = TwitterTimeline;
