@@ -33,18 +33,19 @@ ReactDOM.render(
 
 ## Required props
 
-Option|Description
----|---
-`widgetId`| Create a widget [here](https://dev.twitter.com/web/embedded-timelines) and get the widget ID (e.g.  `<a class="twitter-timeline" href="https://twitter.com/****" data-widget-id="`**your widget ID**`">****</a>`))
+|Option    |Description                                                            |
+|---       |---                                                                    |
+|`widgetId`| Create a widget [here](https://dev.twitter.com/web/embedded-timelines)|
+
+get the widget ID (e.g.  `<a data-widget-id="`**your widget ID**`">****</a>`)
 
 ## Optional props
 
-Option|Description
----|---
-`user`| Twitter username
-`chrome`| Custmize the timeline: `noheader`, `nofooter`, `noborders`, `noscrollbar`, `transparent`
-`limit`| Display a specific number of items between 1 and 20
-
+|Option  |Description                                                       |
+|---     |---                                                               |
+|`user`  | Twitter username                                                 |
+|`chrome`| `noheader`, `nofooter`, `noborders`, `noscrollbar`, `transparent`|
+|`limit` | Display a specific number of items between 1 and 20              |
 
 ---
 
