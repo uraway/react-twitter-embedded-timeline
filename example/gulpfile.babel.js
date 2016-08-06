@@ -1,3 +1,4 @@
+/* eslint no-console: 0, arrow-body-style: 0 */
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import browserify from 'browserify';
@@ -6,17 +7,17 @@ import watchify from 'watchify';
 import source from 'vinyl-source-stream';
 
 function compile(watch) {
-  var bundler = watchify(browserify('./main.jsx', { debug: true }).transform(babelify, {presets: ["es2015", "react"]}));
+  const bundler = watchify(browserify('./main.jsx', { debug: true }).transform(babelify, { presets: ['es2015', 'react'] }));
 
   function rebundle() {
     bundler.bundle()
-      .on('error', function(err) { console.error(err); this.emit('end'); })
+      .on('error', (err) => { console.error(err); this.emit('end'); })
       .pipe(source('build.js'))
       .pipe(gulp.dest('./'));
   }
 
   if (watch) {
-    bundler.on('update', function() {
+    bundler.on('update', () => {
       console.log('bundling js...');
       rebundle();
     });
@@ -27,10 +28,10 @@ function compile(watch) {
 
 function watch() {
   return compile(true);
-};
+}
 
-gulp.task('build', function() { return compile(); });
-gulp.task('watch', function() { return watch(); });
+gulp.task('build', () => { return compile(); });
+gulp.task('watch', () => { return watch(); });
 
 gulp.task('browserSync', () => {
   browserSync({
@@ -45,8 +46,8 @@ gulp.task('reload', () => {
   browserSync.reload();
 });
 
-gulp.task('default', ['browserSync','watch'], () => {
-  gulp.watch('./index.html',  ['reload']);
+gulp.task('default', ['browserSync', 'watch'], () => {
+  gulp.watch('./index.html', ['reload']);
   gulp.watch('./main.jsx', ['reload']);
   gulp.watch('../src/*.jsx', ['reload']);
 });

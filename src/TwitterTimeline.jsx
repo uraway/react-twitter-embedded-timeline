@@ -1,7 +1,16 @@
-import React from 'react';
+/* global twttr */
+
+import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 
-export default class TwitterTimeline extends React.Component {
+export default class TwitterTimeline extends Component {
+  static propTypes = {
+    widgetId: PropTypes.number.isRequired,
+    user: PropTypes.number,
+    chrome: PropTypes.arrayOf(['noheader', 'nofooter', 'noborders', 'noscrollbar', 'transparent']),
+    limit: PropTypes.number,
+  };
+
   constructor(props) {
     super(props);
     this.state = ({ initialized: false });
@@ -31,19 +40,16 @@ export default class TwitterTimeline extends React.Component {
   }
 
   render() {
+    const { user, widgetId, chrome, limit } = this.props;
     return (
       <a
         ref="twittertimeline"
         className="twitter-timeline"
-        href={"https://twitter.com/" + this.props.user}
-        data-widget-id={this.props.widgetId}
-        data-chrome={this.props.chrome}
-        data-tweet-limit={this.props.limit}
+        href={`https://twitter.com/+${user}`}
+        data-widget-id={widgetId}
+        data-chrome={chrome}
+        data-tweet-limit={limit}
       ></a>
     );
   }
 }
-/*
-<a class="twitter-timeline" href="https://twitter.com/hashtag/corgi" data-widget-id="695856236961492993">#corgi のツイート</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-*/
