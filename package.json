@@ -10,7 +10,7 @@
     "twitter-timeline",
     "embedded-timeline"
   ],
-  "main": "lib/main.js",
+  "main": "lib/TwitterTimeline.js",
   "watch": {
     "build": {
       "patterns": [
