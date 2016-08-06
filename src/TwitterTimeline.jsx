@@ -5,9 +5,9 @@ import ReactDOM from 'react-dom';
 
 export default class TwitterTimeline extends Component {
   static propTypes = {
-    widgetId: PropTypes.number,
+    widgetId: PropTypes.string,
     user: PropTypes.string,
-    chrome: PropTypes.arrayOf(['noheader', 'nofooter', 'noborders', 'noscrollbar', 'transparent']),
+    chrome: PropTypes.string,
     limit: PropTypes.number,
   };
 

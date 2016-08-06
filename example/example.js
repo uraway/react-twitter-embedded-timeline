@@ -5,9 +5,12 @@ import TwitterTimeline from '../lib/TwitterTimeline';
 class App extends Component {
   render() {
     return (
-      <TwitterTimeline user="uraway_" />
+      <div>
+        <TwitterTimeline user="uraway_" />
+        <TwitterTimeline widgetId="695868534455275520" chrom="noborders noheader" />
+      </div>
     );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('app'));
