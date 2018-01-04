@@ -1299,9 +1299,12 @@ react-dom@^16.2.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-twitter-embedded-timeline@^0.3.5:
+"react-twitter-embedded-timeline@https://github.com/uraway/react-twitter-embedded-timeline.git#e9c42d4":
   version "0.3.5"
-  resolved "https://registry.yarnpkg.com/react-twitter-embedded-timeline/-/react-twitter-embedded-timeline-0.3.5.tgz#546d8c14fdc54101377df16b4c3d2de162c88d40"
+  resolved "https://github.com/uraway/react-twitter-embedded-timeline.git#e9c42d43f20972e817c86d2619bbd862c2c6a416"
+  dependencies:
+    prop-types "^15.6.0"
+    react "^16.2.0"
 
 react@^16.2.0:
   version "16.2.0"
