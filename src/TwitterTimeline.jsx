@@ -1,7 +1,7 @@
 /* global twttr */
 
-import React, { Component, PropTypes } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class TwitterTimeline extends Component {
   static propTypes = {
@@ -9,6 +9,13 @@ export default class TwitterTimeline extends Component {
     user: PropTypes.string,
     chrome: PropTypes.string,
     limit: PropTypes.number,
+  };
+
+  static defaultProps = {
+    widgetId: '',
+    user: '',
+    chrome: '',
+    limit: 20,
   };
 
   constructor(props) {
@@ -22,7 +29,7 @@ export default class TwitterTimeline extends Component {
     }
 
     if (typeof twttr === 'undefined') {
-      const twittertimeline = ReactDOM.findDOMNode(this.refs.twittertimeline);
+      const twittertimeline = this.node;
       const twitterscript = document.createElement('script');
       twitterscript.src = '//platform.twitter.com/widgets.js';
       twitterscript.async = true;
@@ -40,16 +47,20 @@ export default class TwitterTimeline extends Component {
   }
 
   render() {
-    const { user, widgetId, chrome, limit } = this.props;
+    const {
+      user, widgetId, chrome, limit
+    } = this.props;
     return (
       <a
-        ref="twittertimeline"
+        ref={node => this.node = node}
         className="twitter-timeline"
         href={`https://twitter.com/${user}`}
         data-widget-id={widgetId}
         data-chrome={chrome}
         data-tweet-limit={limit}
-      />
+      >
+      Tweets by @{user}
+      </a>
     );
   }
 }

@@ -17,20 +17,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TwitterTimeline from 'react-twitter-embedded-timeline';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <TwitterTimeline user="uraway_" />
-        <TwitterTimeline widgetId="695868534455275520" chrome="noborders noheader" />
-      </div>
-    );
-  }
-}
-
-
 ReactDOM.render(
-  <App />,
+  <TwitterTimeline widgetId="695868534455275520" chrome="noborders noheader" />,
   document.getElementById('app')
 );
 ```
@@ -43,12 +31,6 @@ ReactDOM.render(
 
 get the widget ID (e.g.  `<a data-widget-id="`**your widget ID**`">****</a>`)
 
-OR
-
-|Option|Description             |
-|---   |---                     |
-|`user`|Your username on Twitter|
-
 ## Optional props
 
 You can highly customize the Timeline only if you set `widgetId`.
@@ -57,6 +39,7 @@ You can highly customize the Timeline only if you set `widgetId`.
 |---     |---                                                               |
 |`chrome`| `noheader`, `nofooter`, `noborders`, `noscrollbar`, `transparent`|
 |`limit` | Display a specific number of items between 1 and 20              |
+|`user`  | Your username on Twitter                                          |
 
 ---
 
