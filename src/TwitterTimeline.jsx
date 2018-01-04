@@ -15,8 +15,8 @@ export default class TwitterTimeline extends Component {
     widgetId: '',
     user: '',
     chrome: '',
-    limit: 20
-  }
+    limit: 20,
+  };
 
   constructor(props) {
     super(props);
