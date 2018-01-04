@@ -40,7 +40,9 @@ export default class TwitterTimeline extends Component {
   }
 
   render() {
-    const { user, widgetId, chrome, limit } = this.props;
+    const {
+      user, widgetId, chrome, limit
+    } = this.props;
     return (
       <a
         ref="twittertimeline"
