@@ -37,10 +37,6 @@
   "bugs": {
     "url": "https://github.com/uraway/react-twitter-embedded-timeline/issues"
   },
-  "peerDependencies": {
-    "react": ">=0.14.7",
-    "react-dom": ">=0.14.7"
-  },
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-eslint": "8.1.2",
@@ -55,5 +51,9 @@
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-react": "7.5.1",
     "npm-watch": "^0.1.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0"
   }
 }
