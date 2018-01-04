@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "express": "^4.14.0",
-    "react-twitter-embedded-timeline": "^0.3.5",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-twitter-embedded-timeline": "^0.3.5"
   },
   "devDependencies": {
     "babel-loader": "^6.2.1",
