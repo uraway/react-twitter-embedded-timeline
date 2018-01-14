@@ -3,7 +3,7 @@
     "express": "^4.14.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-twitter-embedded-timeline": "https://github.com/uraway/react-twitter-embedded-timeline.git#e9c42d4"
+    "react-twitter-embedded-timeline": "0.5.0"
   },
   "devDependencies": {
     "babel-loader": "^6.2.1",
