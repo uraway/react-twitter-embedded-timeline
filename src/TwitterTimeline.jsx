@@ -17,9 +17,9 @@ export default class TwitterTimeline extends Component {
     widgetId: '',
     user: '',
     chrome: '',
-    limit: 20,
-    width: 300,
-    height: 300
+    limit: null,
+    width: null,
+    height: null
   };
 
   constructor(props) {
