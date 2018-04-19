@@ -11,6 +11,7 @@ export default class TwitterTimeline extends Component {
     limit: PropTypes.number,
     width: PropTypes.number,
     height: PropTypes.number
+    loading: PropTypes.node,
   };
 
   static defaultProps = {
@@ -19,7 +20,8 @@ export default class TwitterTimeline extends Component {
     chrome: '',
     limit: null,
     width: null,
-    height: null
+    height: null,
+    loading: null
   };
 
   constructor(props) {
@@ -52,7 +54,7 @@ export default class TwitterTimeline extends Component {
 
   render() {
     const {
-      user, widgetId, chrome, limit, width, height
+      user, widgetId, chrome, limit, width, height, loading
     } = this.props;
     return (
       <a
@@ -65,7 +67,7 @@ export default class TwitterTimeline extends Component {
         data-width={width}
         data-height={height}
       >
-      Tweets by @{user}
+        {loading || ('Tweets by @' + user)}
       </a>
     );
   }
