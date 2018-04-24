@@ -56,7 +56,6 @@ export default class TwitterTimeline extends Component {
     const {
       user, widgetId, chrome, limit, width, height, loading
     } = this.props;
-    console.log(loading);
     return (
       <a
         ref={node => this.node = node}
