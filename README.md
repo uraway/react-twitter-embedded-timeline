@@ -1,3 +1,7 @@
+# Widget Settings Depricated
+
+https://twittercommunity.com/t/deprecating-widget-settings/102295
+
 # react-twitter-embedded-timeline
 
 Simple React component for Twitter Embedded Timeline
@@ -25,9 +29,9 @@ ReactDOM.render(
 
 ## Required props
 
-|Option    |Description                                                            |
-|---       |---                                                                    |
-|`widgetId`| Create a widget [here](https://dev.twitter.com/web/embedded-timelines)|
+| Option     | Description                                                            |
+| ---------- | ---------------------------------------------------------------------- |
+| `widgetId` | Create a widget [here](https://dev.twitter.com/web/embedded-timelines) |
 
 get the widget ID (e.g.  `<a data-widget-id="`**your widget ID**`">****</a>`)
 
@@ -35,14 +39,14 @@ get the widget ID (e.g.  `<a data-widget-id="`**your widget ID**`">****</a>`)
 
 You can highly customize the Timeline only if you set `widgetId`.
 
-|Option   |Description                                                                  |
-|---      |---                                                                          |
-|`chrome` | `noheader`, `nofooter`, `noborders`, `noscrollbar`, `transparent`           |
-|`limit`  | Display a specific number of items between 1 and 20. The timeline is fixed. |
-|`user`   | Your username on Twitter                                                    |
-|`height` | See [#Dimensions](https://dev.twitter.com/web/embedded-timelines#dimensions)|
-|`width`  | See [#Dimensions](https://dev.twitter.com/web/embedded-timelines#dimensions)|
-|`loading`| The text to display while the Timeline is loading.                          |
+| Option    | Description                                                                  |
+| --------- | ---------------------------------------------------------------------------- |
+| `chrome`  | `noheader`, `nofooter`, `noborders`, `noscrollbar`, `transparent`            |
+| `limit`   | Display a specific number of items between 1 and 20. The timeline is fixed.  |
+| `user`    | Your username on Twitter                                                     |
+| `height`  | See [#Dimensions](https://dev.twitter.com/web/embedded-timelines#dimensions) |
+| `width`   | See [#Dimensions](https://dev.twitter.com/web/embedded-timelines#dimensions) |
+| `loading` | The text to display while the Timeline is loading.                           |
 
 ---
 
